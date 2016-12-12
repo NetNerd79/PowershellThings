@@ -7,7 +7,7 @@ param(
 )
 
 
-Invoke-Command -ComputerName "ms-pdq" -ScriptBlock {
+Invoke-Command -ComputerName "%YourPDQ%" -ScriptBlock {
 param($package,$collection)
    
         pdqinventory GetCollectionComputers "$collection" | 
