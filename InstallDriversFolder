@@ -1,0 +1,8 @@
+Set-ExecutionPolicy Bypass
+
+#I would only select the driver folder that matches the arch.
+
+Get-ChildItem "\\pathtodriverfolder\win7\x64" -Recurse -Include *.inf |
+ForEach-Object {
+    pnputil.exe /a /i $_.FullName
+}
