@@ -4,5 +4,5 @@ Set-ExecutionPolicy Bypass
 
 Get-ChildItem "\\pathtodriverfolder\win7\x64" -Recurse -Include *.inf |
 ForEach-Object {
-    pnputil.exe /a /i $_.FullName
+    pnputil.exe -i -a $_.FullName
 }
